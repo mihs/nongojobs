@@ -36,20 +36,20 @@ jobs.run();
 
 ### Options
 
-* **maxJobs** : integer, maximum number of concurrent jobs. Default 5.
-* **colName** : string, the collection where the jobs are stored.
-* **db** : either a mongodb-native instance of database or a connection string for MongoClient.
-* **dbOptions**, if _db_ is a connection string : further options to be passed to MongoClient.connect.
+* `maxJobs` : integer, maximum number of concurrent jobs. Default 5.
+* `colName` : string, the collection where the jobs are stored.
+* `db` : either a mongodb-native instance of database or a connection string for MongoClient.
+* `dbOptions`, if _db_ is a connection string : further options to be passed to MongoClient.connect.
 
 ### Methods
 
-* **start** : starts to check for jobs. It will stop checking when there are no jobs in the database or `stop` is called.
-* **stop** : finish handling all active jobs and stop checking for new jobs. When all active jobs are finished, the _stop_ event is triggered.
+* `start` : starts to check for jobs. It will stop checking when there are no jobs in the database or `stop` is called.
+* `stop` : finish handling all active jobs and stop checking for new jobs. When all active jobs are finished, the _stop_ event is triggered.
 
 ### Events
 
-* **error** : Called when an error has been encountered, including errors from handlers.
-* **stop** : Triggered after calling `stop` and all active jobs have been handled.
+* `error` : Called when an error has been encountered, including errors from handlers.
+* `stop` : Triggered after calling `stop` and all active jobs have been handled.
 
 ### Handlers
 
